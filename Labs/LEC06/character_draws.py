@@ -11,3 +11,4 @@ while True:
     move_circle()
     move_rectangle()
     move_triangle()
+    break  # 1회 흐름 검증용 임시 탈출
