@@ -8,8 +8,8 @@ center_x, center_y = 400, 300
 radius = 200
 
 def move_circle():
-    # 1사분면 호 이동: 0도 -> 90도 (600, 300) -> (400, 500)
-    for degree in range(0, 91, 5):
+    # 반원 호 이동: 0도 -> 180도 (600, 300) -> (400, 500) -> (200, 300)
+    for degree in range(0, 181, 5):
         theta = math.radians(degree)
         x = center_x + radius * math.cos(theta)
         y = center_y + radius * math.sin(theta)
