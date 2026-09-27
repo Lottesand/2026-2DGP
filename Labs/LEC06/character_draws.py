@@ -10,6 +10,7 @@ def move_triangle():
     print('triangle')
 
 open_canvas(800, 600)
+boy = load_image('character.png')
 
 while True:
     move_circle()
