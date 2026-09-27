@@ -1,3 +1,5 @@
+from pico2d import *
+
 def move_circle():
     print('circle')
 
@@ -7,8 +9,12 @@ def move_rectangle():
 def move_triangle():
     print('triangle')
 
+open_canvas(800, 600)
+
 while True:
     move_circle()
     move_rectangle()
     move_triangle()
-    break  # 1회 흐름 검증용 임시 탈출
+    break
+
+close_canvas()
