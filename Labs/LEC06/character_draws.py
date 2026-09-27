@@ -8,14 +8,15 @@ center_x, center_y = 400, 300
 radius = 200
 
 def move_circle():
-    # 원운동 시작점(0도 -> (600, 300)) 좌표 계산 및 출력
-    theta = math.radians(0)
-    x = center_x + radius * math.cos(theta)
-    y = center_y + radius * math.sin(theta)
-    clear_canvas()
-    boy.draw(x, y)
-    update_canvas()
-    delay(0.5)
+    # 1사분면 호 이동: 0도 -> 90도 (600, 300) -> (400, 500)
+    for degree in range(0, 91, 5):
+        theta = math.radians(degree)
+        x = center_x + radius * math.cos(theta)
+        y = center_y + radius * math.sin(theta)
+        clear_canvas()
+        boy.draw(x, y)
+        update_canvas()
+        delay(0.01)
 
 def move_rectangle():
     print('rectangle')
