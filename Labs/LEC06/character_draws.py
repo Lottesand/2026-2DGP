@@ -6,20 +6,19 @@ open_canvas(800, 600)
 character = load_image('character.png')
 
 
-def draw_circle():
-    print("CIRCLE")
-    for degree in range(360):
-        theta = math.radians(degree)
-        x = 400 + 200 * math.cos(theta)
-        y = 300 + 200 * math.sin(theta)
-        draw_character(x, y)
-
-
 def draw_character(x, y):
     clear_canvas()
     character.draw(x, y)
     update_canvas()
     delay(0.01)
+
+
+def draw_circle():
+    for degree in range(360):
+        theta = math.radians(degree)
+        x = 400 + 200 * math.cos(theta)
+        y = 300 + 200 * math.sin(theta)
+        draw_character(x, y)
 
 
 def move_top():
@@ -74,7 +73,6 @@ def move_left_down_edge():
 
 
 def draw_triangle():
-    print("TRIANGLE")
     move_bottom_edge()
     move_right_up_edge()
     move_left_down_edge()
@@ -84,4 +82,5 @@ while True:
     draw_circle()
     draw_rectangle()
     draw_triangle()
-    break
+
+close_canvas()
