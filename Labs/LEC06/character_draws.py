@@ -50,7 +50,11 @@ def draw_rectangle():
 
 
 def move_bottom_edge():
-    print("EDGE_BOTTOM")
+    for step in range(101):
+        t = step / 100
+        x = 100 + (700 - 100) * t
+        y = 100 + (100 - 100) * t
+        draw_character(x, y)
 
 
 def move_right_up_edge():
