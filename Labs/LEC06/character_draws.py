@@ -49,6 +49,18 @@ def draw_rectangle():
     move_left()
 
 
+def move_bottom_edge():
+    pass
+
+
+def move_right_up_edge():
+    pass
+
+
+def move_left_down_edge():
+    pass
+
+
 def draw_triangle():
     print("TRIANGLE")
 
