@@ -58,7 +58,11 @@ def move_bottom_edge():
 
 
 def move_right_up_edge():
-    print("EDGE_RIGHT_UP")
+    for step in range(101):
+        t = step / 100
+        x = 700 + (400 - 700) * t
+        y = 100 + (500 - 100) * t
+        draw_character(x, y)
 
 
 def move_left_down_edge():
