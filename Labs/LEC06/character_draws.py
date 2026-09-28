@@ -81,5 +81,6 @@ def draw_triangle():
 
 
 while True:
+    draw_rectangle()
     draw_triangle()
     break
