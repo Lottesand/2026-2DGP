@@ -46,6 +46,7 @@ def draw_rectangle():
     move_top()
     move_right()
     move_bottom()
+    move_left()
 
 
 def draw_triangle():
