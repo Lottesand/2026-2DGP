@@ -74,6 +74,7 @@ def move_left_down_edge():
 
 
 def draw_triangle():
+    print("TRIANGLE")
     move_bottom_edge()
     move_right_up_edge()
     move_left_down_edge()
