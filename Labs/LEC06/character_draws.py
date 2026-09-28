@@ -50,19 +50,21 @@ def draw_rectangle():
 
 
 def move_bottom_edge():
-    pass
+    print("EDGE_BOTTOM")
 
 
 def move_right_up_edge():
-    pass
+    print("EDGE_RIGHT_UP")
 
 
 def move_left_down_edge():
-    pass
+    print("EDGE_LEFT_DOWN")
 
 
 def draw_triangle():
-    print("TRIANGLE")
+    move_bottom_edge()
+    move_right_up_edge()
+    move_left_down_edge()
 
 
 while True:
