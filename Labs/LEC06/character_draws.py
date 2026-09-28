@@ -66,7 +66,11 @@ def move_right_up_edge():
 
 
 def move_left_down_edge():
-    print("EDGE_LEFT_DOWN")
+    for step in range(101):
+        t = step / 100
+        x = 400 + (100 - 400) * t
+        y = 500 + (100 - 500) * t
+        draw_character(x, y)
 
 
 def draw_triangle():
