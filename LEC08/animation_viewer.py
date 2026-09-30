@@ -5,7 +5,12 @@ sprite_sheet = load_image('megaman-sprite.png')
 
 scale = 12
 
-ACTIONS = ()
+ACTIONS = (
+    (
+        (8, 313, 21, 24),
+        (58, 313, 21, 24)
+    ),
+)
 
 
 def render_frame(left, bottom, width, height):
