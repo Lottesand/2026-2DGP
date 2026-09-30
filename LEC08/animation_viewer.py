@@ -5,6 +5,8 @@ sprite_sheet = load_image('megaman-sprite.png')
 
 scale = 12
 
+ACTIONS = ()
+
 
 def render_frame(left, bottom, width, height):
     clear_canvas()
@@ -12,7 +14,5 @@ def render_frame(left, bottom, width, height):
     update_canvas()
     delay(0.1)
 
-
-render_frame(8, 313, 21, 24)
 
 close_canvas()
