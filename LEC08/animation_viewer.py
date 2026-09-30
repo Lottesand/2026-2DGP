@@ -24,6 +24,7 @@ def play_action(action, repeat_count=5):
     for r in range(repeat_count):
         for frame in action:
             render_frame(*frame)
+    delay(1.0)
 
 
 play_action(ACTIONS[0], 5)
