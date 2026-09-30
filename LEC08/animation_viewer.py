@@ -31,10 +31,19 @@ ACTIONS = (
 )
 
 
+def handle_events():
+    events = get_events()
+    for event in events:
+        if event.type == SDL_QUIT:
+            close_canvas()
+            exit()
+
+
 def render_frame(left, bottom, width, height):
     clear_canvas()
     sprite_sheet.clip_draw(left, bottom, width, height, 400, 300, width * scale, height * scale)
     update_canvas()
+    handle_events()
     delay(0.1)
 
 
@@ -42,7 +51,9 @@ def play_action(action, repeat_count=5):
     for r in range(repeat_count):
         for frame in action:
             render_frame(*frame)
-    delay(1.0)
+    for _ in range(10):
+        handle_events()
+        delay(0.1)
 
 
 def main():
