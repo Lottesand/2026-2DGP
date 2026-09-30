@@ -45,7 +45,8 @@ def play_action(action, repeat_count=5):
     delay(1.0)
 
 
-for action in ACTIONS:
-    play_action(action, 5)
+while True:
+    for action in ACTIONS:
+        play_action(action, 5)
 
 close_canvas()
