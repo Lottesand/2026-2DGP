@@ -40,4 +40,12 @@ def render_frame(left, bottom, width, height):
     delay(0.08)
 
 
+def play_action(action, speed, repeat_count=1):
+    for r in range(repeat_count):
+        for frame in action:
+            render_frame(*frame)
+
+
+play_action(ACTIONS[0], SPEEDS[0], 1)
+
 close_canvas()
