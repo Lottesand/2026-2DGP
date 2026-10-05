@@ -86,7 +86,6 @@ def play_action(action, speed, repeat_count=5):
         delay(0.1)
 
 
-play_action(ACTIONS[0], SPEEDS[0], 5)
-play_action(ACTIONS[1], SPEEDS[1], 5)
+play_action(ACTIONS[2], SPEEDS[2], 5)
 
 close_canvas()
