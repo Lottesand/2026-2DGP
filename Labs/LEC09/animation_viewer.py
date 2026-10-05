@@ -57,6 +57,12 @@ def play_action(action, speed, repeat_count=5):
     for r in range(repeat_count):
         for frame in action:
             x += speed * dir
+            if x > 1120:
+                x = 1120
+                dir = -1
+            elif x < 80:
+                x = 80
+                dir = 1
             render_frame(*frame)
             last_frame = frame
     for _ in range(10):
