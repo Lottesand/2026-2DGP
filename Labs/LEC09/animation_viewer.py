@@ -41,9 +41,20 @@ def render_frame(left, bottom, width, height):
 
 
 def play_action(action, speed, repeat_count=5):
+    last_frame = action[-1]
     for r in range(repeat_count):
         for frame in action:
             render_frame(*frame)
+            last_frame = frame
+    for _ in range(10):
+        clear_canvas()
+        if dir == 1:
+            sprite_sheet.clip_draw(last_frame[0], last_frame[1], last_frame[2], last_frame[3], x, y, last_frame[2] * scale, last_frame[3] * scale)
+        else:
+            sprite_sheet.clip_composite_draw(last_frame[0], last_frame[1], last_frame[2], last_frame[3], 0, 'h', x, y, last_frame[2] * scale, last_frame[3] * scale)
+        update_canvas()
+        handle_events()
+        delay(0.1)
 
 
 play_action(ACTIONS[0], SPEEDS[0], 5)
