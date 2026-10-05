@@ -7,6 +7,9 @@ scale = 4
 x, y = 100, 300
 dir = 1
 
+ACTIONS = ()
+SPEEDS = ()
+
 
 def handle_events():
     events = get_events()
@@ -26,7 +29,5 @@ def render_frame(left, bottom, width, height):
     handle_events()
     delay(0.08)
 
-
-render_frame(1, 361, 33, 40)
 
 close_canvas()
