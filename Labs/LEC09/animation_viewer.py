@@ -52,9 +52,11 @@ def render_frame(left, bottom, width, height):
 
 
 def play_action(action, speed, repeat_count=5):
+    global x, dir
     last_frame = action[-1]
     for r in range(repeat_count):
         for frame in action:
+            x += speed * dir
             render_frame(*frame)
             last_frame = frame
     for _ in range(10):
