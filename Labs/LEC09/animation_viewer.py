@@ -94,7 +94,12 @@ def play_action(action, speed, repeat_count=5):
         delay(0.1)
 
 
-for i in range(len(ACTIONS)):
-    play_action(ACTIONS[i], SPEEDS[i], 5)
+def main():
+    while True:
+        for i in range(len(ACTIONS)):
+            play_action(ACTIONS[i], SPEEDS[i], 5)
 
-close_canvas()
+
+if __name__ == '__main__':
+    main()
+    close_canvas()
